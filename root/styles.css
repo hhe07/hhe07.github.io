@@ -1,0 +1,35 @@
+html{
+    font-family: 'Playfair Display';
+    font-weight: 50;
+}
+
+.name > h1{
+    font-weight: 75;
+}
+.pronouns > h2{
+    font-size: 1.4em;
+    font-weight: 75;
+    font-style:italic;
+}
+
+.semi_permanent > h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.song_section > h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.song_section > h3{
+    font-weight: 400;
+    font-style:italic;
+}
+
+blockquote{
+    border-left:solid 0.25em;
+    border-radius: 2px;
+    border-color:#6b6b6b;
+    padding-left:20px;
+    margin-left: 20px;
+}
