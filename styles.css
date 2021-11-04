@@ -89,3 +89,7 @@ blockquote{
     vertical-align: middle;
     max-width:200px;
   }
+
+  .new_entry{
+    max-width:30%
+  }
