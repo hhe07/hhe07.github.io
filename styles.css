@@ -1,0 +1,91 @@
+html{
+    font-family: 'Zen Antique Soft';
+    font-weight: 50;
+}
+
+.main{
+  margin-top: 50px;
+}
+h1{
+    font-size: 20px;
+    font-weight: 75;
+}
+
+.semi_permanent > h2{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.song_section > h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.song_section > h3{
+    font-weight: 400;
+    font-style:italic;
+}
+
+blockquote{
+    border-left:solid 0.25em;
+    border-radius: 2px;
+    border-color:#6b6b6b;
+    padding-left:20px;
+    margin-left: 20px;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #dddada;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    max-width:200px;
+  }
