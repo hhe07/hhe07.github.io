@@ -1,5 +1,5 @@
 html{
-    font-family: 'Zen Antique Soft';
+    font-family: 'Merriweather', serif; /*prev: zen antique soft*/
     font-weight: 50;
 }
 
@@ -92,4 +92,10 @@ blockquote{
 
   .new_entry{
     max-width:30%
+  }
+
+  .card{
+    font-family: 'Merriweather-Light', serif; /*prev: zen antique soft*/
+    font-weight: 10;
+    padding: 0px 15% 10% ;
   }
