@@ -1,0 +1,45 @@
+
+html{
+    font-family: 'Amiri';
+    line-height: 1.15;
+}
+
+nav{
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+/* The navigation menu links */
+nav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+nav a:hover {
+    color: #dddada;
+}
+
+.main{
+    width: 90%;
+    padding-left: 12%;
+    margin-top: 3%;
+}
+
+blockquote{
+    border-left:solid 0.25em;
+    border-radius: 2px;
+    border-color:#6b6b6b;
+    padding-left:20px;
+    margin-left: 20px;
+}

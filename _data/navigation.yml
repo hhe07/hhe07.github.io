@@ -1,0 +1,12 @@
+- name: hhe07
+  link: /
+- name: about
+  link: /about.html
+- name: computing
+  link: /computing.html
+- name: photography
+  link: /photo.html
+- name: music
+  link: /music.html
+- name: blog
+  link: /blog.html
