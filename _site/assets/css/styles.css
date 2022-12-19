@@ -12,4 +12,6 @@ nav a:hover { color: #dddada; }
 
 blockquote { border-left: solid 0.25em; border-radius: 2px; border-color: #6b6b6b; padding-left: 20px; margin-left: 20px; }
 
+.post { width: 70%; }
+
 /*# sourceMappingURL=styles.css.map */
