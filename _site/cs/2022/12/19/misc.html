@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>misc</title>
+  </head>
+  <body>
+    <nav>
+    
+      <a href="/" >
+        hhe07/ <br>
+      </a>
+    
+      <a href="/about.html" >
+        about/ <br>
+      </a>
+    
+      <a href="/computing.html" >
+        computing/ <br>
+      </a>
+    
+      <a href="/photo.html" >
+        photography/ <br>
+      </a>
+    
+      <a href="/music.html" >
+        music/ <br>
+      </a>
+    
+      <a href="/blog.html" >
+        blog/ <br>
+      </a>
+    
+  </nav>
+    <div class = "main">
+      <h1>misc</h1>
+
+    <p><i> in progress //  writeup 19 Dec 2022 // hhe07</i></p>
+
+
+<div class="post">
+    <p>(<em>miscellaneous projects which don’t need their own page</em>)</p>
+
+<h3 id="collage">collage</h3>
+<p><img src="/assets/imgs/collage.png" alt="screenshot of collage as it is" /></p>
+
+<p>sticky notes for the terminal. goal was to have some fun with the excellent Charmbracelet <a href="https://github.com/charmbracelet/bubbletea"><code class="language-plaintext highlighter-rouge">bubbletea</code></a> and <a href="https://github.com/charmbracelet/bubbles"><code class="language-plaintext highlighter-rouge">bubbles</code></a> packages. there are some key issues, i.e. nesting UI elements and changing which parts the keyboard addresses, which need figuring out; and otherwise some of the features in the two libraries used weren’t fixed at last check (i.e. support for <code class="language-plaintext highlighter-rouge">home</code> and <code class="language-plaintext highlighter-rouge">end</code> keys in some terminals).</p>
+
+<p>STATUS: shelved</p>
+
+<p>url: <a href="https://github.com/hhe07/collage">https://github.com/hhe07/collage</a></p>
+
+<h3 id="willow">willow</h3>
+
+<p>speaking of the above, i wanted to try developing my own terminal UI library, resolving some of the issues i had with the Charmbracelet tools. the notable features i’ve thought about are:</p>
+<ul>
+  <li><em>explicit</em> focus on nesting and composition of UI elements (a la HTML)</li>
+  <li>layers: method of addressing specific elements or groups of elements, as well as “permissioning”</li>
+  <li>extensive support for specifically orienting UI elements relative to each other or relative to the page.</li>
+  <li>support for Charmbracelet’s <a href="https://github.com/charmbracelet/lipgloss"><code class="language-plaintext highlighter-rouge">lipgloss</code></a> for more specific styling</li>
+  <li>largely lock-free, or at least optimised for multi-threaded programming</li>
+</ul>
+
+<p>STATUS: concept</p>
+
+<h3 id="bincalc-junior-year-of-high-school">bincalc, junior year of high school</h3>
+
+<p>this was one of the first projects i tried to do in go, and turned out surprisingly well for a first attempt. the basic idea was to build a terminal calculator app that could support binary / bitwise operators (i.e. left shifts, right shifts, etc.) for one of my friends, as part of my IB Computer Science SL course’s required final project. a lot of the documentation in the git repo is a result of that, but is certainly helpful in figuring out how it works. broadly, the program works as follows:</p>
+
+<ol>
+  <li>take and tokenize user input</li>
+  <li>use the <a href="https://en.wikipedia.org/wiki/Shunting_yard_algorithm"><em>shunting yard algorithm</em></a> to convert to reverse polish notation</li>
+  <li>evaluate the reverse polish notation expression and display the result</li>
+</ol>
+
+<p>it’s split across two files, <code class="language-plaintext highlighter-rouge">shuntyard.go</code> and <code class="language-plaintext highlighter-rouge">main.go</code>, which makes it very small and simple, but it represented a reasonable improvement in programming compared to where i was in sophomore year — i had begun to focus more on algorithms and data structures as the basis for building my programs, and put a lot of thought into the flow and structure of the program compared to before. for a project i only had one or two months to complete, it wasn’t a bad result.</p>
+
+<p>STATUS: completed</p>
+
+<p>url: <a href="https://github.com/hhe07/bincalc">https://github.com/hhe07/bincalc</a></p>
+
+<h3 id="science-fair-project-sophomore-year-of-high-school">science fair project, sophomore year of high school</h3>
+
+<p>this honestly isn’t a very good project, but it does provide a good metric for measuring my improvement in programming and thinking about computer science across time. i intended to create a program that would translate chinese to english using markov chains to map the parts of speech in one language to the other. after the sentence structure was determined, i was to use some sort of dictionary (with special cases for idioms) to translate the words and put them in the right place. however, i didn’t do much research on the feasibility of this project, and also didn’t have a strong linguistics / natural language processing background to start from. these two factors further inhibited my work when i tried to find a professor to work with at the university of colorado, which ultimately failed since i didn’t have very clear ideas about what i wanted to do or the validity of my approach. finally, i was a very poor programmer at the time, who hadn’t yet grasped the importance of conceptual knowledge and the importance of algorithms and data structures, so the code was all slapdash and poorly put together. nonetheless, it’s still public as an example of an important milestone in my programming journey.</p>
+
+<p>STATUS: completed</p>
+
+<p>url: <a href="https://github.com/hhe07/srs-final">https://github.com/hhe07/srs-final</a></p>
+
+</div>
+    </div>
+  </body>
+</html>

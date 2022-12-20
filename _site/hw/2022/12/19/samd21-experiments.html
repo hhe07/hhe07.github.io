@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>samd21 experiments</title>
+  </head>
+  <body>
+    <nav>
+    
+      <a href="/" >
+        hhe07/ <br>
+      </a>
+    
+      <a href="/about.html" >
+        about/ <br>
+      </a>
+    
+      <a href="/computing.html" >
+        computing/ <br>
+      </a>
+    
+      <a href="/photo.html" >
+        photography/ <br>
+      </a>
+    
+      <a href="/music.html" >
+        music/ <br>
+      </a>
+    
+      <a href="/blog.html" >
+        blog/ <br>
+      </a>
+    
+  </nav>
+    <div class = "main">
+      <h1>samd21 experiments</h1>
+
+    <p><i> in progress //  writeup 19 Dec 2022 // hhe07</i></p>
+
+
+<div class="post">
+    <h3 id="19-dec-2022">19 Dec 2022</h3>
+
+<p>On the Tuesday night between my two finals, I was bored, so I started looking up Arduinos and associated hardware to fall asleep. I was thinking of a previous project idea that I had, which was to build an e-Ink MP3 player using an Arduino or Raspberry Pi, so the <a href="https://store-usa.arduino.cc/products/arduino-mkr-zero-i2s-bus-sd-for-sound-music-digital-audio-data?selectedStore=us">Arduino MKR Zero</a> caught my eye, as it claimed to have the I2S bus for sound device communication. Another thing that was interesting to me was the SAMD21 microcontroller that the MKR Zero was built around, since I remembered that my father had a SAMD21 evaluation kit at home somewhere. While it doesn’t provide nearly the convenience of the Arduino ecosystem, I did manage to get it to blink a LED, and to get the software installed.</p>
+
+<p>I followed <a href="https://omzlo.com/articles/programming-the-samd21-using-atmel-ice-with-openocd-(updated)">this</a> wonderful guide on how to get the SAMD21 working with Linux, but did make some adaptations for Manjaro / Arch. The other steps are basically the same.</p>
+
+<ol>
+  <li>Install the necessary tools:
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">arm-none-eabi-gcc</code>, <code class="language-plaintext highlighter-rouge">arm-none-eabi-gdb</code>: used for compiling and debugging code on microcontroller</li>
+      <li><code class="language-plaintext highlighter-rouge">openocd</code>: used to interface with the microcontroller</li>
+      <li><code class="language-plaintext highlighter-rouge">avr-gcc</code> and <code class="language-plaintext highlighter-rouge">avr-gdb</code>: probably not necessary, but they may include useful headers</li>
+      <li><code class="language-plaintext highlighter-rouge">avrdude</code>: probably not necessary, but may be useful</li>
+    </ol>
+  </li>
+  <li>Create a directory for the project</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">openocd.cfg</code> in the directory:
+    <ol>
+      <li>I found the SAMD21 Xplained’s config <a href="https://github.com/arduino/OpenOCD/blob/master/tcl/board/atmel_samd21_xplained_pro.cfg">here</a></li>
+    </ol>
+  </li>
+  <li>For the SAMD21 Xplained specifically, no additional power source is necessary, just the microUSB cable plugged into DEBUG USB</li>
+  <li>Also, the integrated LED is plugged into PB30, instead of PA17 on the board that the tutorial used, so change <code class="language-plaintext highlighter-rouge">REG_PORT_DIR0</code> to <code class="language-plaintext highlighter-rouge">REG_PORT_DIR1</code>, and do similar for <code class="language-plaintext highlighter-rouge">REG_PORT_OUT0</code>. This changes the output register from the one controlling the PAXX I/O pins to the PBXX I/O pins. Then, change the left shift afterwards to <code class="language-plaintext highlighter-rouge">1&lt;&lt;30</code> rather than <code class="language-plaintext highlighter-rouge">1&lt;&lt;17</code>, which selects the 30th pin rather than the 17th.</li>
+  <li>The article mistakenly encourages downloading the Atmel Software Framework rather than the Advanced Software Framework. Download the Advanced Software Framework zip <a href="https://www.microchip.com/en-us/tools-resources/develop/libraries/advanced-software-framework">here</a>, then extract. Otherwise, follow the spirit of the instructions — copy the correct startup and linker files. The use of a new environment variable is somewhat overkill imo but w/e</li>
+  <li>The Makefile is correct, just change the processor name.</li>
+</ol>
+
+<h3 id="next-steps">next steps</h3>
+<ul>
+  <li>dig around in Advanced Software Framework for more useable header files.</li>
+  <li>look around in the <a href="https://github.com/atmelcorp/atmel-software-package">Atmel Software Package</a> for more of the above, as well as examples that can be adapted</li>
+  <li>try writing more complex programs</li>
+  <li>honestly, probably not the best choice for a MP3 player at my current skill level, but <em>basic familiarity</em> with the embedded programming workflow will be helpful.</li>
+</ul>
+
+</div>
+    </div>
+  </body>
+</html>

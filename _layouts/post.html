@@ -2,7 +2,11 @@
 layout: default
 ---
 <h1>{{ page.title | downcase}}</h1>
-<p><i> project completed {{page.completed | date_to_string}} //  writeup {{ page.date | date_to_string }} // {{ page.author }}</i></p>
+{% if page.completed == "in progress"%}
+    <p><i> in progress //  writeup {{ page.date | date_to_string }} // {{ page.author }}</i></p>
+{% else %}
+    <p><i> project completed {{page.completed | date_to_string}} //  writeup {{ page.date | date_to_string }} // {{ page.author }}</i></p>
+{% endif %}
 
 <div class="post">
     {{ content }}
