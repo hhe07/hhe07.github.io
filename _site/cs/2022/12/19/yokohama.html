@@ -16,6 +16,10 @@
         about/ <br>
       </a>
     
+      <a href="/coursework.html" >
+        coursework/ <br>
+      </a>
+    
       <a href="/computing.html" >
         computing/ <br>
       </a>
@@ -40,7 +44,11 @@
 
 
 <div class="post">
-    <p>As discussed previously within the <a href="/cs/2022/12/19/csci-1300-final.html">CSCI 1300 Final Project</a> post, I previously had an idea for a game of my own design, which I’ll be working on over my winter break. It’s based on the manga <a href="https://en.wikipedia.org/wiki/Yokohama_Kaidashi_Kik%C5%8D">Yokohama Kaidashi Kikou</a> (YKK), and focuses on exploration and taking the world in rather than combat.</p>
+    <h2 id="update-24123">update 24/1/23</h2>
+<p>While I did spend the majority of my winter break resting and spending time with my family, I did end up making some progress on one of the components of this project, notably, the progress tracking. Progress tracking is handled as through an object which contains an array of <code class="language-plaintext highlighter-rouge">uint64</code> and a “progress type”, with each bit within the <code class="language-plaintext highlighter-rouge">uint64</code> representing whether or not a progress marker has been reached. The first <code class="language-plaintext highlighter-rouge">uint64</code> in the array represents the first 64 potential progress markers, the next <code class="language-plaintext highlighter-rouge">uint64</code> the next 64, and so on. Modification and access of the data in this structure is handled by methods defined under the object, which first select the relevant <code class="language-plaintext highlighter-rouge">uint64</code>, and then use shift operations and masks to check / modify the result at a given index. This scheme was chosen for the sake of memory efficiency.</p>
+
+<h2 id="191222">19/12/22</h2>
+<p>As discussed previously within the <a href="/cs/2022/12/19/csci-1300-final.html">CSCI 1300 Final Project</a> post, I previously had an idea for a game of my own design, which I’ll be working on over my winter break. It’s based on the manga <a href="https://en.wikipedia.org/wiki/Yokohama_Kaidashi_Kik%C5%8D">Yokohama Kaidashi Kikou</a> (YKK), and focuses on exploration and taking the world in rather than combat.</p>
 
 <p>I’ll post more details when I’ve made some more progress, but I’m planning on making the game in Go, with the Charmbracelet <a href="https://github.com/charmbracelet/bubbletea"><code class="language-plaintext highlighter-rouge">bubbletea</code></a> and <a href="https://github.com/charmbracelet/bubbles"><code class="language-plaintext highlighter-rouge">bubbles</code></a> packages for UI control. Despite my problems with them for more complicated UIs, as described in the Collage section of <a href="/cs/2022/12/19/misc.html">misc</a>, I think it’ll work fine for the relatively simple interface with only one input area that the yokohama game requires.</p>
 

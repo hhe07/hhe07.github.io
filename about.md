@@ -7,7 +7,7 @@ title: about
 
 software buffoon // hardware appreciator // soup enthusiast
 
-freshman computer engineering student @ university of colorado boulder
+sophomore computer engineering student @ cornell
 
 
 ### resume / cv
