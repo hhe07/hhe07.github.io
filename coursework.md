@@ -17,6 +17,7 @@ below is a detailed inventory of all courses i've taken in my academic history, 
 ## 2022-23 (cu boulder)
 ### spring
 - CSCI 2270, Data Structures (A)
+  - project with 
 - ECEN 2350, Digital Logic (A)
   - miscellaneous verilog will be coming soon
 - APPM 2360, Introduction to Differential Equations with Linear Algebra (A)

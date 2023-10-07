@@ -10,8 +10,8 @@ software buffoon // hardware appreciator // soup enthusiast
 sophomore computer engineering student @ cornell
 
 
-### resume / cv
-you can find my cv [here](/assets/pdf/cv.pdf)
+### resume
+you can find my resume [here](/assets/pdf/resume.pdf)
 
 ### my links
 *for more contact information, go through my linkedin*
