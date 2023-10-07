@@ -5,9 +5,11 @@ title: about
 # helen he (aka leo ge)
 ### *([any/all](https://en.pronouns.page/@hhe07))* 
 
-software buffoon // hardware appreciator // soup enthusiast
+software buffoon // dumb hardware enjoyer // soup enthusiast
 
 sophomore computer engineering student @ cornell
+
+i go by helen, my given name is leo!
 
 
 ### resume

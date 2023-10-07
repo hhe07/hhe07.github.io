@@ -17,9 +17,9 @@ below is a detailed inventory of all courses i've taken in my academic history, 
 ## 2022-23 (cu boulder)
 ### spring
 - CSCI 2270, Data Structures (A)
-  - project with 
+  - our final project was building a movies database with skip lists and hash tables. i'm unsure if i'm allowed to post code, unfortunately
 - ECEN 2350, Digital Logic (A)
-  - miscellaneous verilog will be coming soon
+  - a little analog tone generator i wrote near the end of the class can be found [here](https://github.com/hhe07/ecen2350-tone)
 - APPM 2360, Introduction to Differential Equations with Linear Algebra (A)
 - PHYS 1120, General Physics 2 (A)
 - PHYS 1140, Experimental Physics 1 (A)

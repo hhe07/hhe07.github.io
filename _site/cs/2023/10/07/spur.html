@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>spur</title>
+  </head>
+  <body>
+    <nav>
+    
+      <a href="/" >
+        hhe07/ <br>
+      </a>
+    
+      <a href="/about.html" >
+        about/ <br>
+      </a>
+    
+      <a href="/coursework.html" >
+        coursework/ <br>
+      </a>
+    
+      <a href="/computing.html" >
+        computing/ <br>
+      </a>
+    
+      <a href="/photo.html" >
+        photography/ <br>
+      </a>
+    
+      <a href="/music.html" >
+        music/ <br>
+      </a>
+    
+      <a href="/blog.html" >
+        blog/ <br>
+      </a>
+    
+  </nav>
+    <div class = "main">
+      <h1>spur</h1>
+
+    hhe07
+
+
+<div class="post">
+    <p>this summer, i was lucky enough to be part of the CU Summer Program for Undergraduate Research (SPUR). there, i worked with Professor Tamara Lehman on a benchmark suite to test for transient execution vulnerabilities on both a processor simulator and a native OS.</p>
+
+<h3 id="what-i-did">what i did</h3>
+
+<p>in more detail, i was able to finish benchmarks for three types of <em>spectre</em> vulnerabilities. modern processors have the capability to do work ahead of time and then decide whether to keep the results, in order to maximise usage of their hardware. however, the processor’s internal state is not always thoroughly cleaned up afterward.</p>
+
+<p>the danger lies in this leftover state. an attacker can potentially trigger workahead on sensitive data, embed the data into the processor’s state, and then read the state after the workahead has been discarded to indirectly obtain the sensitive data.</p>
+
+<p>the framework i used to develop my research was the paper <a href="https://www.usenix.org/conference/usenixsecurity19/presentation/canella"><em>A systemic evaluation of transient execution attacks and defenses</em></a> by Canella et. al, which organised the various types of transient execution attacks, and (more interesting to me) speculative execution attacks based on a hierarchy. the paper’s authors argue that the exploitation of <em>speculative execution</em> rather than delayed memory privilege checking forms the basis of a spectre vulnerability, and that specific physical parts of the processor may be targeted as a part of speculative execution attacks.</p>
+
+<p>i was able to implement working examples for a subset of the potential attack types Canella et al identified — the simplest versions of the BTB (branch target buffer), RSB (return stack buffer), and PHT (pattern history table) attacks, attacking the physical parts of the processor referenced in their name.</p>
+
+<h3 id="challenges">challenges</h3>
+
+<p>Canella et. al also have a <a href="https://transient.fail">website</a> and associated Github repo that contain proof-of-concept code for the attack types they cover in their paper. however, not all of them work on the gem5 processor simulator, a (relatively) standard tool for processor research. the bulk of my research involved determining how to implement attacks such that they would work both in a native Linux environment <em>and</em> in the gem5 simulation environment.</p>
+
+<p>not all proofs-of-concept that i found worked on both platforms, and some didn’t work at all. by looking at the traces gem5 emitted of its own internal operation, and by using the theory of operation of the attack, i was able to determine what was going on with a specific example, if it was working properly, and how i might need to fix it. through this process of trying proofs-of-concept and attempting various improvements, i was able to combine the merge examples i found (attributed in the code that i wrote) with a more modular codebase to build a single configureable binary that tests for the BTB, RSB, and PHT vulnerabilities.</p>
+
+<h3 id="summary">summary</h3>
+<p>i learned a lot through this research experience, since it was my first time doing research in a more formal environment, and my first exposure to the more complicated aspects of computer architecture and organisation. based on what i’ve learned, i’d like to learn more about computer architecture in the future, and to do more work associated with it.</p>
+
+<p>you can find the code i modified / wrote <a href="https://github.com/hhe07/spectre-benchmarks">here</a>, the final presentation i did <a href="/assets/pdf/spur_final_ge%20(2).pdf">here</a>, and the notes for that presentation <a href="/assets/pdf/slides_compact.pdf">here</a>. the latter two contain more information about how the spectre attacks actually work, if it’s interesting.</p>
+
+
+</div>
+    </div>
+  </body>
+</html>
