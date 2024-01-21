@@ -2,24 +2,22 @@
 layout: default
 title: about
 ---
-# helen he (aka leo ge)
-### *([any/all](https://en.pronouns.page/@hhe07))* 
+# leo's site
 
 software buffoon // dumb hardware enjoyer // soup enthusiast
 
 sophomore computer engineering student @ cornell
 
-i go by helen, my given name is leo!
 
 
-### resume
+### career information
 you can find my resume [here](/assets/pdf/resume.pdf)
+
+for more information about courses that i've taken and my projects, go to the [coursework](coursework.html) or [computing](computing.html) pages.
 
 ### my links
 *for more contact information, go through my linkedin*
 
 [linkedin](https://www.linkedin.com/in/leo-ge-b53663259/)
 
-[github](https://github.com/hhe07)
-
-[last.fm](https://www.last.fm/user/hhe07/library)
+[github](https://github.com/hhe07?tab=repositories)
